@@ -7,6 +7,7 @@
 ### Что необходимо установить
 
 1. [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+
 2. [Vagrant](https://www.vagrantup.com/downloads.html)
 
 ### Что используется в Vagrant
