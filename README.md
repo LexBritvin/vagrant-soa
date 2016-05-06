@@ -7,7 +7,6 @@
 ### Что необходимо установить
 
 1. [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-
 2. [Vagrant](https://www.vagrantup.com/downloads.html)
 
 ### Что используется в Vagrant
@@ -23,8 +22,11 @@
 #### Windows
 
 Рано или поздно, всё равно пришлось бы установить Git, поэтому:
+
 1. Скачиваем и устанавливаем [Git для Windows](https://git-scm.com/download/win)
+
 2. Запускаем Git Bash из меню Пуск
+
 3. Всё, ребята, Вы с нами, дальше как на Linux.
 
 #### Linux
