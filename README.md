@@ -1,18 +1,18 @@
 ## Что это
 
-Проект содержит конфигурацию Vagrant с LAMP для выполнения заданий по курсу Веб сервисы
+Проект содержит конфигурацию Vagrant с LAMP (Linux, Apache2, MySQL, PHP) для выполнения заданий по курсу Веб сервисы
 
 ## Что необходимо установить
 
-VirtualBox https://www.virtualbox.org/wiki/Downloads
-Vagrant https://www.vagrantup.com/downloads.html
+1. [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+2. [Vagrant](https://www.vagrantup.com/downloads.html)
 
 ## Что установлено
 
-apache2
-php7.0
-mysql5.5
-phpmyadmin
+* apache2
+* php7.0
+* mysql5.5
+* phpmyadmin
 
 ## Как запустить
 
@@ -22,22 +22,26 @@ phpmyadmin
 
 ### Linux
 
-$ git clone git ...
-$ cd vagrant-soa-ws
-$ vagrant up
+```
+   git clone git ...
+   cd vagrant-soa-ws
+   vagrant up
+```
 
 Чтобы зайти на виртуальную машину
-$ vagrant ssh
-
+```
+   vagrant ssh
+```
 Виртуальные машины доступны из virtualbox.
 
 ## Проверить, что всё работает
 
-Перейти на страницу PhpMyAdmin
+Перейти на страницу **PhpMyAdmin**
 
 http://localhost:8080/phpmyadmin
 
 Логин: root
+
 Пароль: root
 
 ## Как это устроено
