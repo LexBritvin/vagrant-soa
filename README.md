@@ -41,30 +41,36 @@ cd vagrant-soa
 vagrant up
 ```
 
-Чтобы обновить проект, в папке с проектом необходимо ввести:
+## Обновление Vagrant
+
+Чтобы обновить Vagrant, в папке с проектом необходимо ввести:
 
 ```
 git pull
+vagrant reload --provision
 ```
 
-Чтобы зайти на виртуальную машину по SSH
-```
-vagrant ssh
-```
+## Как пользоваться Vagrant
 
-Чтобы остановить виртуальную машину
-```
-vagrant halt
-```
+В папке с проектом:
+    vagrant help
 
-Виртуальные машины доступны из virtualbox.
+* Чтобы зайти на виртуальную машину по SSH
+    vagrant ssh
+
+* Перезагрузить виртуальную машину
+    vagrant reload
+
+* Чтобы остановить виртуальную машину
+    vagrant halt
+
+Виртуальные машины доступны из VirtualBox.
 
 #### Проверить, что всё работает
 
 Перейти на страницу PhpMyAdmin
-```
-http://localhost:8080/phpmyadmin
-```
+    http://localhost:8080/phpmyadmin
+
 * Логин: root
 * Пароль: root
 
