@@ -32,9 +32,7 @@
 ```
 sudo apt-get install git
 ```
-
 Скачиваем последнюю версию проекта:
-
 ```
 git clone https://github.com/LexBritvin/vagrant-soa.git
 cd vagrant-soa
@@ -44,7 +42,6 @@ vagrant up
 ## Обновление Vagrant
 
 Чтобы обновить Vagrant, в папке с проектом необходимо ввести:
-
 ```
 git pull
 vagrant reload --provision
@@ -53,21 +50,21 @@ vagrant reload --provision
 ## Как пользоваться Vagrant
 
 В папке с проектом:
-
-    vagrant help
-
+```
+vagrant help
+```
 * Чтобы зайти на виртуальную машину по SSH
-
-    vagrant ssh
-
+```
+vagrant ssh
+```
 * Перезагрузить виртуальную машину
-
-    vagrant reload
-
+```
+vagrant reload
+```
 * Чтобы остановить виртуальную машину
-
-    vagrant halt
-
+```
+vagrant halt
+```
 Виртуальные машины доступны из VirtualBox.
 
 #### Проверить, что всё работает
@@ -76,11 +73,11 @@ vagrant reload --provision
 ```
 http://localhost:8080/phpmyadmin
 ```
-* Логин: root
-* Пароль: root
+* Логин: *root*
+* Пароль: *root*
 
 ## Как это устроено
 
-* В папке www должны лежать ваш код. 
-* В папке apache2-sites располагаются конфигурации виртуальных серверов apache2, в эту папку можно положить свои конфиги и перезагрузить Vagrant.
+* В папке *./www* должен лежать ваш код. 
+* В папке *./apache2-sites* располагаются конфигурации виртуальных серверов apache2, в эту папку можно положить свои конфиги и перезагрузить Vagrant.
 
