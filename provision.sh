@@ -21,3 +21,4 @@ sudo apt-get install -y -f php7.0-mysql php7.0-curl php7.0-gd php-pear php7.0-mc
 
 # Change virtual host directory.
 sudo sed -i 's/IncludeOptional sites-enabled\/\*\.conf/IncludeOptional vagrant-sites\/\*\.conf/g' /etc/apache2/apache2.conf
+sudo a2enmod rewrite
