@@ -81,3 +81,16 @@ http://localhost:8080/phpmyadmin
 * В папке *./www* должен лежать ваш код. 
 * В папке *./apache2-sites* располагаются конфигурации виртуальных серверов apache2, в эту папку можно положить свои конфиги и перезагрузить Vagrant.
 
+### Apache ActiveMQ
+
+Для одного задания нужно иметь ActiveMQ. 
+Обнаружилось, что он плохо запускается по Windows, поэтому был добавлен в эту конфигурацию.
+
+Чтобы запустить:
+```
+vagrant ssh
+cd /home/vagrant/apache-activemq/bin/
+/home/vagrant/apache-activemq/bin/activemq console
+```
+Чтобы выключить Ctrl+C.
+

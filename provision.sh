@@ -41,20 +41,31 @@ fi
 
 # Check if dir exist or empty and install phpmyadmin.
 if [ ! -d "$PMA_DIR" ] || [ ! "$(ls -A $PMA_DIR)" ]; then
-  wget -O /tmp/pma.tar.gz https://files.phpmyadmin.net/phpMyAdmin/4.6.1/phpMyAdmin-4.6.1-all-languages.tar.gz
+  mkdir $PMA_DIR 
+  wget -q -O /tmp/pma.tar.gz https://files.phpmyadmin.net/phpMyAdmin/4.6.1/phpMyAdmin-4.6.1-all-languages.tar.gz
   tar -xf /tmp/pma.tar.gz -C $PMA_DIR --strip-components=1
   rm /tmp/pma.tar.gz
 fi
 
+# Install Java.
+if [ ! -f "/usr/bin/java" ]; then
+  sudo apt-get install default-jre -y
+fi
+
 # Check if dir exist or empty and install phpmyadmin.
 if [ ! -d "$ACTIVEMQ_DIR" ] || [ ! "$(ls -A $ACTIVEMQ_DIR)" ]; then
-  wget -O /tmp/activemq.tar.gz http://apache-mirror.rbc.ru/pub/apache//activemq/5.13.3/apache-activemq-5.13.3-bin.tar.gz
+  mkdir $ACTIVEMQ_DIR 
+  wget -q -O /tmp/activemq.tar.gz http://apache-mirror.rbc.ru/pub/apache//activemq/5.13.3/apache-activemq-5.13.3-bin.tar.gz
   tar -xf /tmp/activemq.tar.gz -C $ACTIVEMQ_DIR --strip-components=1
   rm /tmp/activemq.tar.gz
 fi
 
+# Set permissions for new directories.
+sudo chown -R vagrant:vagrant $ACTIVEMQ_DIR
 sudo chown -R vagrant:www-data $PMA_DIR
 
-# Change virtual host directory.
+# Change virtual hosts directory.
 sudo sed -i 's/IncludeOptional sites-enabled\/\*\.conf/IncludeOptional vagrant-sites\/\*\.conf/g' /etc/apache2/apache2.conf
+
+# Enable clean urls.
 sudo a2enmod rewrite
