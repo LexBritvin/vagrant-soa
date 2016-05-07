@@ -11,10 +11,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     owner: "vagrant", 
     group: "www-data", 
     mount_options: ["dmode=777,fmode=777"]
-  config.vm.synced_folder './phpmyadmin', '/home/vagrant/phpmyadmin', 
-    owner: "vagrant", 
-    group: "www-data", 
-    mount_options: ["dmode=777,fmode=777"]
   config.vm.synced_folder './apache2-sites', '/etc/apache2/vagrant-sites', 
     owner: "root", 
     group: "root", 
