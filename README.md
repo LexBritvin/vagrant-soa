@@ -53,15 +53,19 @@ vagrant reload --provision
 ## Как пользоваться Vagrant
 
 В папке с проектом:
+
     vagrant help
 
 * Чтобы зайти на виртуальную машину по SSH
+
     vagrant ssh
 
 * Перезагрузить виртуальную машину
+
     vagrant reload
 
 * Чтобы остановить виртуальную машину
+
     vagrant halt
 
 Виртуальные машины доступны из VirtualBox.
