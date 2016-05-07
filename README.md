@@ -33,7 +33,7 @@
 sudo apt-get install git
 ```
 
-Скачиваем последнюю версию:
+Скачиваем последнюю версию проекта:
 
 ```
 git clone https://github.com/LexBritvin/vagrant-soa.git
@@ -41,7 +41,7 @@ cd vagrant-soa
 vagrant up
 ```
 
-Чтобы обновить проект:
+Чтобы обновить проект, в папке с проектом необходимо ввести:
 
 ```
 git pull
