@@ -28,6 +28,12 @@
 3. Всё, ребята, Вы с нами, дальше как на Linux.
 
 #### Linux
+Если ещё не стоит git:
+```
+sudo apt-get install git
+```
+
+Скачиваем последнюю версию:
 
 ```
 git clone https://github.com/LexBritvin/vagrant-soa.git
@@ -35,7 +41,13 @@ cd vagrant-soa
 vagrant up
 ```
 
-Чтобы зайти на виртуальную машину
+Чтобы обновить проект:
+
+```
+git pull
+```
+
+Чтобы зайти на виртуальную машину по SSH
 ```
 vagrant ssh
 ```
