@@ -89,7 +89,6 @@ http://localhost:8080/phpmyadmin
 Чтобы запустить:
 ```
 vagrant ssh
-cd /home/vagrant/apache-activemq/bin/
 /home/vagrant/apache-activemq/bin/activemq console
 ```
 Чтобы выключить Ctrl+C.
