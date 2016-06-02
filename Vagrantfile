@@ -9,6 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 80,    host: 8080
   # Forward ActiveMQ.
   config.vm.network "forwarded_port", guest: 8161,    host: 8161
+  config.vm.network "forwarded_port", guest: 61616,    host: 61616
   config.vm.network "private_network", ip: "192.168.10.33"
   config.vm.synced_folder './www', '/home/vagrant/www', 
     owner: "vagrant", 
