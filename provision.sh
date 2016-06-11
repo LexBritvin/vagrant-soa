@@ -3,6 +3,7 @@
 PMA_DIR="/home/vagrant/phpmyadmin"
 PROVISION_INIT="/etc/profile.d/provision_init.lock"
 ACTIVEMQ_DIR="/home/vagrant/apache-activemq"
+SOAP_UPD="/etc/profile.d/soap_upd.lock"
 
 
 # Install it only once.
@@ -30,6 +31,11 @@ if [ ! -f "$PROVISION_INIT" ]; then
   # Clean temp files and set flag to prvent this provisioning again.
   sudo apt-get clean
   touch $PROVISION_INIT
+fi
+
+if [ ! -f "$SOAP_UPD" ]; then
+  sudo apt-get update
+  sudo apt-get install php7.0-soap
 fi
 
 # Check if dir exist or empty and install phpmyadmin.
