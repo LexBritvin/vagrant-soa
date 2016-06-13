@@ -33,6 +33,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
   # install some base packages
-  config.vm.provision :shell, path: "provision.sh"
+  config.vm.provision :shell, path: "provision.sh", privileged: false
   config.vm.provision "shell", inline: "sudo service apache2 restart", run: "always"
 end
